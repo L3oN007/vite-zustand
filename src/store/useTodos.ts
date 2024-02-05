@@ -6,9 +6,9 @@ interface ToDoStore {
   todos: ToDo[]
   fetchTodos: () => void
   addTodo: (todo: ToDo) => void
-  toggleTodo: (todoId: number) => void
-  deleteTodo: (todoId: number) => void
-  updateTodo: (todoId: number, updatedFields: Partial<ToDo>) => void
+  toggleTodo: (todoId: string) => void
+  deleteTodo: (todoId: string) => void
+  updateTodo: (todoId: string, updatedFields: Partial<ToDo>) => void
 }
 
 const useToDoStore = create<ToDoStore>((set) => ({

@@ -17,14 +17,14 @@ function App() {
     fetchTodos()
   }, [fetchTodos])
 
-  const handleDeleteTodo = async (todoId) => {
+  const handleDeleteTodo = async (todoId: string) => {
     await deleteTodo(todoId)
     toast.error("Todo with ID " + todoId + " deleted successfully!")
   }
 
   const [newTitle, setNewTitle] = useState("")
 
-  const handleUpdateTodo = async (todoId) => {
+  const handleUpdateTodo = async (todoId: string) => {
     if (!newTitle) {
       // You might want to add some validation or error handling here
       return
